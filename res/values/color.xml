@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="middle_view">#104E8B</color>
-    <color name="green">#0f0</color>
-    <color name="blue">#00f</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
 </resources>

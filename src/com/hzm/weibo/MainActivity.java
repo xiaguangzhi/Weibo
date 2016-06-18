@@ -22,17 +22,6 @@ public class MainActivity extends FragmentActivity {
 	private LayoutInflater layoutInflater;
 	private MiddlePopupWindow middlePopupWindow;
 	private GridView gridView;
-	private int[] middle_Image={R.drawable.middle_tabbar_1,
-			R.drawable.middle_tabbar_2,
-			R.drawable.middle_tabbar_3,
-			R.drawable.middle_tabbar_4,
-			R.drawable.middle_tabbar_5,
-			R.drawable.middle_tabbar_6,
-			R.drawable.middle_false,
-			};
-	private String[] middle_text={"文字","照片","头条","签到","直播","更多"};   
-	
-	
 	private Class[] fragmentArray = { HomePage.class, MessagePage.class,
 			MiddlePage.class, FindPage.class, MyFragment.class };
 	private int[] mImageViewArray = { R.drawable.tab_home_btn,
@@ -56,6 +45,7 @@ public class MainActivity extends FragmentActivity {
 					public void onClick(View v) {
 						
 						MiddlePopupWindow middlePopupWindow=new MiddlePopupWindow(MainActivity.this);
+						
 						middlePopupWindow.show(MainActivity.this);
 						
 						
@@ -75,7 +65,7 @@ public class MainActivity extends FragmentActivity {
 					.setIndicator(getTabItemView(i));
 			mTabHost.addTab(tabSpec, fragmentArray[i], null);
 			mTabHost.getTabWidget().getChildAt(i)
-					.setBackgroundColor(Color.rgb(140, 227, 190));
+					.setBackgroundColor(Color.BLACK);
 		}
 	}
 
