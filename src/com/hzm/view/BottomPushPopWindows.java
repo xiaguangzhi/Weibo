@@ -1,5 +1,7 @@
 package com.hzm.view;
 
+import com.hzm.weibo.R;
+
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
@@ -28,8 +30,8 @@ public abstract class BottomPushPopWindows<T> extends PopupWindow{
 		 
 		
 		 
-		 Drawable drawable = context.getResources().getDrawable(android.R.color.white);
-		 drawable.setAlpha(95);
+		 Drawable drawable = context.getResources().getDrawable(android.R.color.black);
+		 drawable.setAlpha(220);
 		 setBackgroundDrawable(drawable);
 		 
 		

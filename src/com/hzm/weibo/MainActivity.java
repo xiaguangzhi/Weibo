@@ -11,6 +11,7 @@ import android.support.v4.app.FragmentTabHost;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TabHost.TabSpec;
 import android.widget.TextView;
@@ -19,12 +20,22 @@ import android.widget.Toast;
 public class MainActivity extends FragmentActivity {
 	private FragmentTabHost mTabHost;
 	private LayoutInflater layoutInflater;
-	MiddlePopupWindow middlePopupWindow;
+	private MiddlePopupWindow middlePopupWindow;
+	private GridView gridView;
+	private int[] middle_Image={R.drawable.middle_tabbar_1,
+			R.drawable.middle_tabbar_2,
+			R.drawable.middle_tabbar_3,
+			R.drawable.middle_tabbar_4,
+			R.drawable.middle_tabbar_5,
+			R.drawable.middle_tabbar_6,
+			R.drawable.middle_false,
+			};
+	private String[] middle_text={"文字","照片","头条","签到","直播","更多"};   
 	
 	
-	private Class fragmentArray[] = { HomePage.class, MessagePage.class,
+	private Class[] fragmentArray = { HomePage.class, MessagePage.class,
 			MiddlePage.class, FindPage.class, MyFragment.class };
-	private int mImageViewArray[] = { R.drawable.tab_home_btn,
+	private int[] mImageViewArray = { R.drawable.tab_home_btn,
 			R.drawable.tab_message_btn, R.drawable.tab_middle_btn,
 			R.drawable.tab_find_btn, R.drawable.tab_my_btn };
 	private String mTextviewArray[] = { "首页", "消息", "", "发现", "我" };

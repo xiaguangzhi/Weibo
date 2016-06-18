@@ -20,7 +20,7 @@ public class MiddlePopupWindow extends BottomPushPopWindows<Void> {
 		//获取视图
 		View root = View.inflate(context, R.layout.middle_view,null);
 		View btn_view = root.findViewById(R.id.middle_btn);
-		btn_view.setAlpha(10);
+		root.setAlpha(30);
 		btn_view.setOnClickListener(new OnClickListener() {
 			
 			@Override
