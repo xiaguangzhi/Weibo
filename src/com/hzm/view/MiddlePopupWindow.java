@@ -1,6 +1,9 @@
 package com.hzm.view;
 
+
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -8,7 +11,6 @@ import java.util.Map;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -16,6 +18,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hzm.weibo.Data;
@@ -74,6 +77,15 @@ public class MiddlePopupWindow extends BottomPushPopWindows<Void> {
 			}
 
 		});
+		SimpleDateFormat dateFormat=new SimpleDateFormat("dd,EEE,MM/yyyy");
+			String format = dateFormat.format(new Date());
+			String[] date = format.split(",");
+		TextView text_day = (TextView) root.findViewById(R.id.text_day);
+		text_day.setText(date[0]);
+		TextView text_week=(TextView) root.findViewById(R.id.text_week);
+		text_week.setText(date[1]);
+		TextView text_year=(TextView) root.findViewById(R.id.text_year);
+		text_year.setText(date[2]);
 
 		return root;
 	}
